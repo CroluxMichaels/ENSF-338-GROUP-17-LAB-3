@@ -44,16 +44,15 @@ for a in input_size:
 print(f"Comparison List: {no_comparisons}")
 print(f"Swap List: {no_swaps}")
 
-for i in range(50):
-    normalized.append(i)
-
 plt.figure()
 plt.scatter(input_size, no_comparisons)
 plt.xlabel("Input Size")
 plt.ylabel("Number of Comparisons")
+plt.title("Number of Comparisons vs Input Size")
 comparisons = sp.curve_fit(quadratic, input_size, no_comparisons)
 comp_y = []
 for i in range(50):
+    normalized.append(i)
     comp_y.append(quadratic(i, comparisons[0][0]))
 plt.plot(normalized, comp_y)
 plt.savefig("ex3.4.1.jpg")
@@ -63,6 +62,7 @@ plt.figure()
 plt.scatter(input_size, no_swaps)
 plt.xlabel("Input Size")
 plt.ylabel("Number of Swaps")
+plt.title("Number of Swaps vs Input Size")
 swaps = sp.curve_fit(quadratic, input_size, no_swaps)
 swap_y = []
 for i in range(50):
