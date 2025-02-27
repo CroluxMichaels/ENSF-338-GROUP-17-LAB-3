@@ -39,10 +39,6 @@ def binary_insertion_sort(arr):
         
         arr[pos] = key  # Insert key at the correct position
 
-# Example usage:
-arr = [9, 5, 1, 4, 3]
-binary_insertion_sort(arr)
-print("Sorted array:", arr)
 
 def measure_time(sort_function, arr):
     """Measure execution time of a sorting function"""
